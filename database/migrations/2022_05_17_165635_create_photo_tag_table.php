@@ -14,8 +14,8 @@ class CreatePhotoTagTable extends Migration
     public function up()
     {
         Schema::create('photo_tag', function (Blueprint $table) {
-             $table->foreignId('photo_id')->constrained('photos');
-            $table->foreignId('tag_id')->constrained('tags');
+            $table->id();
+            $table->timestamps();
         });
     }
 
